@@ -7,7 +7,7 @@ target = curTime+30
 
 #p.mouseInfo()
 
-cookie = p.locateCenterOnScreen('cooke.png')
+cookie = p.locateCenterOnScreen('cooke.png', confidence = 0.8)
 
 print(cookie)
 
@@ -16,7 +16,8 @@ print(store)
 
 #1. click the cookie as fast as possible
 while True:
-    p.click(cookie) 
+    for i in range(0,10):
+        p.click(cookie)
     break
 #2. cycle through upgrades from buttom to top every minute
 
