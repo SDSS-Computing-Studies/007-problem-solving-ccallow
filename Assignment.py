@@ -14,11 +14,13 @@ print(cookie)
 store = p.locateCenterOnScreen('store.png', confidence=0.75)
 print(store)
 
-#1. click the cookie as fast as possible
+#1. click the cookie
 while True:
     for i in range(0,100):
         p.click(cookie)
     break
 #2. cycle through upgrades from buttom to top every minute
+if target == curTime():
+    print("Yes!")
 
 #3. check the store button every minute
