@@ -16,7 +16,7 @@ print(store)
 
 #1. click the cookie as fast as possible
 while True:
-    for i in range(0,10):
+    for i in range(0,100):
         p.click(cookie)
     break
 #2. cycle through upgrades from buttom to top every minute
