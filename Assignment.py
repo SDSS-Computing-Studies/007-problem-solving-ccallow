@@ -4,7 +4,7 @@ import time as t
 
 curTime = t.time()
 
-#p.mouseInfo()
+p.mouseInfo()
 
 store = p.locateCenterOnScreen('store.png', confidence=0.75)
 print(store)
@@ -18,16 +18,27 @@ def cookieClicks():
         for i in range(0,100):
             p.click(cookie)
         break
-#2.cycle through upgrades from buttom to top every minute
+#2.cycle through upgrades from buttom to top
 def upgrades():
-    p.moveTo(1193,340)
-    if p.pixelMatchesColour(1193,340(255,255,255)):
+    #farm
+    p.moveTo(1197,463)
+    if p.pixelMatchesColor(1196,463,(255,255,255)):
         for i in range(0,5):
-            p.Click(1193,340)
+            p.click(1197,463)
+    t.sleep(2)
+    #grandma
+    p.moveTo(1193,403)
+    if p.pixelMatchesColor(1193,403,(255,255,255)):
+        for i in range(0,5):
+            p.click(1193,403)
+    t.sleep(2)
+    #cursor
+    p.moveTo(1193,340)
+    if p.pixelMatchesColor(1193,340,(255,255,255)):
+        for i in range(0,5):
+            p.click(1193,340)
+    t.sleep(2)
 
-
-#Cursor (1193, 326)
-#Grandma (1194,393)
 #Farm (1195,454)
 #Mine(1201, 519)
 #Factory (1196,582)
@@ -44,6 +55,7 @@ def upgrades():
 def playGame():
     cookieClicks()
     upgrades()
+    print("Finished!")
 
 
 playGame()
