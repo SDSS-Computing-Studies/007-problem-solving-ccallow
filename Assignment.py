@@ -68,7 +68,7 @@ def store():
     print
     p.click(store)
     p.move(-121,64)
-    p.click()
+    p.click(1151, 235)
     t.sleep(0.5)
 
 def playGame():
@@ -81,6 +81,4 @@ def playGame():
             continue
         else:
             break
-
-
 playGame()
